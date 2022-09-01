@@ -1,4 +1,4 @@
-FROM java
+FROM maven:3.5-jdk-8-alpine as builder
 ADD ./target/myproject-0.0.1-SNAPSHOT.jar /myproject-0.0.1-SNAPSHOT.jar
 ADD ./run.sh /run.sh
 RUN chmod a+x /run.sh
