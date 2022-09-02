@@ -35,9 +35,9 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: ArjunLakshmanasamy/hello-world-spring-boot
-        registry: ghcr.io
+        image: arjunlakshmanasamy/hello-world-spring-boot
         tag: v1
+        registry: ghcr.io        
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GHCR_TOKEN }}
          
