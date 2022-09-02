@@ -31,4 +31,7 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        
+    - name: DockerPush
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/sample-springboot-java
       
