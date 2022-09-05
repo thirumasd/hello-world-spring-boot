@@ -44,7 +44,7 @@ jobs:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GHCR_TOKEN }}
       run: |
-        docker login -u $username -p $password 
+        docker login -u github.repository_owner -p $password 
  
     - name: push the docker image
       run: docker push arjunlakshmanasamy/hello-world-spring-boot:v3
