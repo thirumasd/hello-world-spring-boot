@@ -37,14 +37,13 @@ jobs:
     
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag arjunlakshmanasamy/hello-world-spring-boot:v3
-
-
-    - name: github login
-      env:
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.GHCR_TOKEN }}
-      run: |
-        docker login -u github.repository_owner -p $password 
- 
-    - name: push the docker image
-      run: docker push arjunlakshmanasamy/hello-world-spring-boot:v3
+      
+    #- name: github login
+     # env:
+       # username: ${{ github.repository_owner }}
+       # password: ${{ secrets.GHCR_TOKEN }}
+    #  run: |
+        #docker login -u github.repository_owner -p $password 
+    
+    - name: push the docker image    
+      run: docker push arjunlakshmanasamy/hello-world-spring-boot:v3      
