@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Test2
 
 on:
   push:
@@ -26,5 +26,3 @@ jobs:
  
     - name: push the docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/sample-springboot-java
-	  
-    
