@@ -39,7 +39,7 @@ jobs:
       run: docker build . --file Dockerfile --tag arjunlakshmanasamy/hello-world-spring-boot:v3
       
     - name: GitHUb login
-      run : echo "${{ secrets.GHCR_TOKEN }}" | docker login https://ghcr.io -u ${{ github.repository_owner }} --password @Bcdef24
+      run : echo "${{ secrets.GHCR_TOKEN }}" | docker login https://ghcr.io -u ${{ github.repository_owner }} --password-stdin
    
     - name: push image 
       run: |
