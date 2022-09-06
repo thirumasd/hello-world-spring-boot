@@ -36,14 +36,14 @@ jobs:
       run: docker push arjunlakshmanasamy/sample-springboot-java:v3
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag $IMAGE_NAME
+      run: docker build . --file Dockerfile --tag arjunlakshmanasamy/hello-world-spring-boot:v3
       
     - name: GitHUb login
       run : echo "${{ secrets.GHCR_TOKEN }}" | docker login https://ghcr.io -u ${{ github.repository_owner }} --passsword @Bcdef24
    
     - name: push image 
       run: |
-        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME:${{ github.run_id }}
+        IMAGE_ID=ghcr.io/${{ github.repository_owner }}/arjunlakshmanasamy/hello-world-spring-boot:v3:${{ github.run_id }}
         docker push $IMAGE_ID
     
     #- name: github login 
